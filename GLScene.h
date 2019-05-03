@@ -1,22 +1,18 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
 
-#include <QMainWindow>
+#include <QGLWidget>
+#include <QtOpenGL>
+#include <QTimer>
 
-namespace Ui {
-class MainWindow;
-}
 
-class MainWindow : public QMainWindow
+class GLScene : public QGLWidget
 {
-    Q_OBJECT
+protected:
+    void initializeGL();
+    void resizeGL(int weigth, int height);
+    void paintGL();
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-private:
-    Ui::MainWindow *ui;
+    GLScene(QWidget *parent = 0);
 };
 
-#endif // MAINWINDOW_H
+

@@ -5,8 +5,11 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += opengl
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+
+LIBS += -lOpengl32
 
 TARGET = OpenGLQtSimple
 TEMPLATE = app
@@ -26,10 +29,16 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+    interpreter/scaner/scaner.cpp \
+    interpreter/parser/parser.cpp \
+    MainWindow.cpp \
+    GLScene.cpp
 
 HEADERS += \
-        mainwindow.h
+    interpreter/scaner/scaner.h \
+    interpreter/parser/parser.h \
+    MainWindow.h \
+    GLScene.h
 
 FORMS += \
         mainwindow.ui
