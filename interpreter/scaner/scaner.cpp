@@ -110,6 +110,16 @@ int Scaner::doScan(LEX)
                 lex[i++] = text[pointer++];
                 column++;
             }
+            else
+            {
+                while((text[pointer] >= 'a' && text[pointer] <= 'z') ||
+                      (text[pointer] >= 'A' && text[pointer] <= 'Z') ||
+                      (text[pointer] >= '0' && text[pointer] <= '9') ||
+                      text[pointer] == '_')
+                {
+
+                }
+            }
         }
 
     }
