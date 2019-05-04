@@ -13,6 +13,7 @@ private:
     int row;
 public:
     Scaner(char*);
+    Scaner(const char*);
     ~Scaner();
     void setPointer(int);
     int getPointer();
@@ -22,8 +23,9 @@ public:
     int getColumn();
 
     void loadFile(char*);
+    void loadFromGUI();
     int doScan(LEX);
-    void generateError(char*, char*);
+    void showError(char*, char*);
 };
 
 #endif // SCANER_H

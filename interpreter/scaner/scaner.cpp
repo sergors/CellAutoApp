@@ -1,20 +1,28 @@
 #include "scaner.h"
-#include <map>
+#include <cstring>
 #include <fstream>
+#include <iostream>
+#include <stdexcept>
 
-static map<int, LEX> keywords = {
-    {t_int, "int"},
-    {t_bool, "bool"},
-    {t_neig, "neig"},
-    {t_system, "System"},
-    {t_class_array, "classArray"},
-    {t_cell_auto, "cellAuto"},
-    {t_var, "var"}
+LEX keywords[MAXKEY] =
+{
+    "var", "int", "bool", "neig", "ClassArray", "CellAuto", "System"
+};
+int indexkeywords[MAXKEY] =
+{
+  t_var, t_int, t_bool, t_neig, t_class_array, t_cell_auto, t_system
 };
 
 Scaner::Scaner(char* path)
 {
     loadFile(path);
+    pointer = 0;
+    row = 1;
+    column = 1;
+}
+Scaner::Scaner(const char* text)
+{
+    strcpy(this->text, text);
     pointer = 0;
     row = 1;
     column = 1;
@@ -50,15 +58,39 @@ void Scaner::loadFile(char* path)
 {
     ifstream inputStream(path);
     unsigned int i = 0;
-    do {
-        this->text[i++] = static_cast<char>(inputStream.get());
-    }while (!inputStream.eof());
-    this->text[i-1] = '$';
-    inputStream.close();
+    if(inputStream)
+    {
+        do {
+            this->text[i++] = inputStream.get();
+        }while (!inputStream.eof());
+        this->text[i-1] = '$';
+        inputStream.close();
+    }
+    else
+    {
+        string fileName(path);
+        throw runtime_error("error open file with name = " + fileName);
+    }
 }
 
-int Scaner::doScan(LEX)
+void Scaner::loadFromGUI()
 {
+
+}
+
+void Scaner::showError(char* err, char* a)
+{
+    int argc;
+    if(a[0]=='\0') printf("Ошибка(%d:%d): %s %s\n",this->column,this->column,err,a);
+    else printf("Ошибка(%d:%d): %s. Прочитали: %s\n",this->column,this->column,err,a);
+    cin>>argc;
+    exit(0);
+}
+
+int Scaner::doScan(LEX lex)
+{
+    for(int i=0; i< MAXLEX;i++) lex[i] = '\0';
+
     start:
     //skip spec symbols
     while(text[pointer] == ' ' ||
@@ -96,9 +128,8 @@ int Scaner::doScan(LEX)
        (text[pointer] >= 'A' && text[pointer] <='Z') ||
             text[pointer] == '_')
     {
-        LEX lex;
         unsigned int i=0;
-        lex[i++] = text[pointer++];
+        lex[i++] = this->text[pointer++];
         column++;
 
         while((text[pointer] >= 'a' && text[pointer] <= 'z') ||
@@ -117,10 +148,19 @@ int Scaner::doScan(LEX)
                       (text[pointer] >= '0' && text[pointer] <= '9') ||
                       text[pointer] == '_')
                 {
-
+                    lex[i++] = text[pointer++];
+                    column++;
                 }
+                showError("Превышена максимально допустимая длина идентификатора", lex);
+                return t_error;
             }
         }
+        for(int i = 0; i < MAXKEY; i++)
+        {
+            if(strcmp(keywords[i], lex) == 0)
+                return indexkeywords[i];
+        }
+        return t_id;
 
     }
 }

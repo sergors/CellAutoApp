@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "interpreter/scaner/scaner.h"
 
 namespace Ui {
     class MainWindow;
@@ -16,6 +17,8 @@ public:
 
 private slots:
     void on_pushButton_3_clicked();
+
+    void on_pushButton_clicked();
 
 private:
   Ui::MainWindow *ui;
