@@ -38,7 +38,8 @@ HEADERS += \
     interpreter/scaner/scaner.h \
     interpreter/parser/parser.h \
     MainWindow.h \
-    GLScene.h
+    GLScene.h \
+    interpreter/defs.h
 
 FORMS += \
         mainwindow.ui
