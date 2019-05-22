@@ -32,14 +32,16 @@ SOURCES += \
     interpreter/scaner/scaner.cpp \
     interpreter/parser/parser.cpp \
     MainWindow.cpp \
-    GLScene.cpp
+    GLScene.cpp \
+    interpreter/semantik/SemTree.cpp
 
 HEADERS += \
     interpreter/scaner/scaner.h \
     interpreter/parser/parser.h \
     MainWindow.h \
     GLScene.h \
-    interpreter/defs.h
+    interpreter/defs.h \
+    interpreter/semantik/SemTree.h
 
 FORMS += \
         mainwindow.ui

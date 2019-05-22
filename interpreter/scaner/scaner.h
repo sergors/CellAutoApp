@@ -15,8 +15,8 @@ public:
     Scaner(char*);
     Scaner(const char*);
     ~Scaner();
-    void setPointer(int);
-    int getPointer();
+    void setPointer(unsigned int);
+    unsigned int getPointer();
     void setRow(int);
     int getRow();
     void setColumn(int);

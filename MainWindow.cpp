@@ -26,6 +26,6 @@ void MainWindow::on_pushButton_clicked()
     int lex = 199;
     lex = sc->doScan(l);
     QMessageBox messageBox;
-    messageBox.setText(QString::number(lex));
+    messageBox.setText(QString::number(lex) + "   " + l);
     messageBox.exec();
 }
