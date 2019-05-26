@@ -19,8 +19,15 @@ public:
     void arrayList();
     void type();
     void expression();
+    void add();
+    void mul();
+    void elExpression();
     void arrayInit();
     void variable();
     void actualParameters();
+    void array();
+    void name();
+    void nameInner();
+    void constant();
 };
 #endif

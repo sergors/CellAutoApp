@@ -6,10 +6,10 @@
 #include <QDebug>
 
 static LEX keywords[MAXKEY] = {
-    "var", "int", "bool", "neig", "ClassArray", "CellAuto", "System", "true", "false", "const", "new"
+    "var", "int", "bool", "neig", "ClassArray", "true", "false", "CellAuto", "System", "const", "new"
 };
 static int indexkeywords[MAXKEY] = {
-  t_var, t_int, t_bool, t_neig, t_class_array, t_cell_auto, t_system, t_true, t_false, t_const, t_new
+  t_var, t_int, t_bool, t_neig, t_class_array, t_bool_const, t_bool_const, t_cell_auto, t_system, t_const, t_new
 };
 
 Scaner::Scaner(char* path) {
@@ -153,12 +153,12 @@ int Scaner::doScan(LEX lex) {
                     return t_error;
                 }
             }
-            return t_double;
+            return t_double_const;
         }
         if(capacity <= 9) {
-            return t_int;
+            return t_int_const;
         } else {
-            return t_long;
+            return t_long_const;
         }
      //digit constant 0 or 0.
     } else if(text[pointer] == '0') {
@@ -176,9 +176,9 @@ int Scaner::doScan(LEX lex) {
                     return t_error;
                 }
             }
-            return t_double;
+            return t_double_const;
         } else {
-            return t_int;
+            return t_int_const;
         }
     } else if(text[pointer] == '{') {
         lex[i++] = text[pointer++]; column++;
