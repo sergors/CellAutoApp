@@ -63,4 +63,11 @@ typedef char TEXT[MAXTEXT];
 #define t_error       200
 #define t_undefined   300
 
+static LEX keywords[MAXKEY] = {
+    "var", "int", "bool", "neig", "ClassArray", "true", "false", "CellAuto", "System", "const", "new"
+};
+static int indexkeywords[MAXKEY] = {
+  t_var, t_int, t_bool, t_neig, t_class_array, t_bool_const, t_bool_const, t_cell_auto, t_system, t_const, t_new
+};
+
 #endif // DEFS_H
