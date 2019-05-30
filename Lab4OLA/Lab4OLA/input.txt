@@ -1,0 +1,45 @@
+struct test
+{
+    float a;
+    char b;
+    bool fl;
+	
+};
+struct Obraz
+{
+   float auto;
+   char mobiii;
+   bool iiilll;
+   test rembo;
+};
+bool flag1,flag2;
+
+float a=10.0;
+char ch='w';
+main()
+{
+	Obraz bz;
+	test st;
+	bool ijoih;
+	st.a=4.6;
+	bz.auto=5.5;
+	bz.rembo.a=0.1;
+	float Sum=0.0;
+	a=bz.rembo.a+st.a-bz.auto;
+	a=10.0;
+	flag1=true;
+	flag2=true;
+	while(flag1 && flag2)
+	{
+		Sum=Sum+bz.rembo.a;
+		while(a)
+		{
+				a=a-1.0;
+				flag1=false;			
+		}
+		a=a+5.0;
+		flag2=false;
+	}
+	
+	
+}

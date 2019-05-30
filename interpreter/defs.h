@@ -58,7 +58,7 @@ typedef char TEXT[MAXTEXT];
 #define t_or               43   //   ||
 
 
-#define t_end              50   //   $
+#define t_end              50   //   #$
 
 #define t_error       200
 #define t_undefined   300

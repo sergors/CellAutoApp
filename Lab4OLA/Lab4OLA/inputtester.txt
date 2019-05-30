@@ -1,0 +1,22 @@
+
+float a,b,c;
+bool d;
+struct test
+{
+	float a;
+	char b;
+	bool c;
+};
+char e,f,g;
+struct test2
+{
+
+	float rrrrooook;
+	float buuuuuuuuk;
+};
+main()
+{
+	test.b=5.5;
+	float ended;
+	char topended;
+}
