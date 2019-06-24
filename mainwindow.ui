@@ -6,45 +6,232 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1041</width>
-    <height>390</height>
+    <width>1457</width>
+    <height>892</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="btnCompile">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>720</x>
       <y>10</y>
       <width>121</width>
-      <height>31</height>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Сканер</string>
-    </property>
-   </widget>
-   <widget class="QPlainTextEdit" name="programText">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>50</y>
-      <width>461</width>
-      <height>281</height>
-     </rect>
+     <string>скомпилировать</string>
     </property>
    </widget>
    <widget class="GLScene" name="mainGlScene" native="true">
     <property name="geometry">
      <rect>
-      <x>490</x>
-      <y>10</y>
-      <width>541</width>
-      <height>301</height>
+      <x>700</x>
+      <y>80</y>
+      <width>751</width>
+      <height>751</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>681</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Page1</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText1">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>681</width>
+        <height>631</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Page2</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText1_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>631</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Page3</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>641</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_4">
+     <attribute name="title">
+      <string>Page4</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText1_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>641</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_5">
+     <attribute name="title">
+      <string>Page5</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText1_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>641</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_6">
+     <attribute name="title">
+      <string>Page6</string>
+     </attribute>
+     <widget class="QTextEdit" name="programText1_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>481</width>
+        <height>641</height>
+       </rect>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btnStart">
+    <property name="geometry">
+     <rect>
+      <x>870</x>
+      <y>10</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>запустить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnStartStop">
+    <property name="geometry">
+     <rect>
+      <x>1020</x>
+      <y>10</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>пауза
+продолжить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnStop">
+    <property name="geometry">
+     <rect>
+      <x>1180</x>
+      <y>10</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>стоп</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="extParamText">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>700</y>
+      <width>291</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>680</y>
+      <width>341</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>параметры внешних воздействий</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnOpenNew">
+    <property name="geometry">
+     <rect>
+      <x>1320</x>
+      <y>10</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>в новом окне</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnActivate">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>730</y>
+      <width>121</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Активировать</string>
     </property>
    </widget>
   </widget>
@@ -53,14 +240,15 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1041</width>
+     <width>1457</width>
      <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
-     <string>лол</string>
+     <string>Меню</string>
     </property>
+    <addaction name="action"/>
    </widget>
    <addaction name="menu"/>
   </widget>
@@ -73,6 +261,11 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="text">
+    <string>Открыть</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <customwidgets>
@@ -81,8 +274,132 @@
    <extends>QWidget</extends>
    <header location="global">glscene.h</header>
    <container>1</container>
+   <slots>
+    <slot>startTimer()</slot>
+   </slots>
   </customwidget>
  </customwidgets>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>btnCompile</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnCompileClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>780</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnActivate</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnActivateClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>400</x>
+     <y>800</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnOpenNew</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnOpenNewClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1375</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnStartClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>930</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStartStop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnStartStopClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1085</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStop</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnStopClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1235</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>728</x>
+     <y>445</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btnStart</sender>
+   <signal>clicked()</signal>
+   <receiver>mainGlScene</receiver>
+   <slot>startTimer()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>930</x>
+     <y>75</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1075</x>
+     <y>495</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>btnCompileClicked()</slot>
+  <slot>btnActivateClicked()</slot>
+  <slot>btnOpenNewClicked()</slot>
+  <slot>btnStartClicked()</slot>
+  <slot>btnStartStopClicked()</slot>
+  <slot>btnStopClicked()</slot>
+ </slots>
 </ui>

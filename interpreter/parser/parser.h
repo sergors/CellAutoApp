@@ -3,11 +3,12 @@
 
 #include <interpreter/scaner/scaner.h>
 #include <interpreter/semantik/SemTree.h>
+#include <interpreter/semantik/Semantik.h>
+
 class Parser {
 private:
     Scaner *scaner;
-    SemTree *tree;
-    DATA_TYPE dataType;
+    Semantik *sem;
 public:
     Parser(Scaner *s);
     int readNextLex(LEX lex);

@@ -2,8 +2,6 @@
 
 Parser::Parser(Scaner *s) {
     this->scaner = s;
-    this->tree = new SemTree();
-    this->tree->setCursor(tree);
 }
 
 void Parser::S() {

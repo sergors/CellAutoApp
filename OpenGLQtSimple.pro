@@ -33,7 +33,13 @@ SOURCES += \
     interpreter/parser/parser.cpp \
     MainWindow.cpp \
     GLScene.cpp \
-    interpreter/semantik/SemTree.cpp
+    interpreter/semantik/SemTree.cpp \
+    interpreter/semantik/ElmSemTree.cpp \
+    interpreter/semantik/Semantik.cpp \
+    interpreter/semantik/StackTree.cpp \
+    interpreter/interpret.cpp \
+    LoadConnector.cpp \
+    InputSyntaxScene.cpp
 
 HEADERS += \
     interpreter/scaner/scaner.h \
@@ -41,7 +47,13 @@ HEADERS += \
     MainWindow.h \
     GLScene.h \
     interpreter/defs.h \
-    interpreter/semantik/SemTree.h
+    interpreter/semantik/SemTree.h \
+    interpreter/semantik/ElmSemTree.h \
+    interpreter/semantik/Semantik.h \
+    interpreter/semantik/StackTree.h \
+    interpreter/interpret.h \
+    LoadConnector.h \
+    InputSyntaxScene.h
 
 FORMS += \
         mainwindow.ui

@@ -3,6 +3,8 @@
 
 #include <QMainWindow>
 #include "interpreter/scaner/scaner.h"
+#include "interpreter/parser/parser.h"
+#include "interpreter/interpret.h"
 
 namespace Ui {
     class MainWindow;
@@ -16,9 +18,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_3_clicked();
+    void btnStopClicked();
+    void btnStartStopClicked();
+    void btnStartClicked();
+    void btnOpenNewClicked();
+    void btnCompileClicked();
+    void btnActivateClicked();
 
-    void on_pushButton_clicked();
 
 private:
   Ui::MainWindow *ui;
